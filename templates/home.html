@@ -1,0 +1,14 @@
+{% extends "layout.html" %} {% block body %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/home.css') }}">
+<div class="card jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4 align-self-center">Embellishment</h1>
+        <p class="lead"> A simple webapp for image processing and more...</p>
+        <form id="" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+            Browse an image...
+            <input name="file" type="file" id="inputGroupFile04" accept="image/*">
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
